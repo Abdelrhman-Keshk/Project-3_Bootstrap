@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+:root {
+  --my-head: #30979e;
+  --my-trns-box: #24b1b1;
+}
+
+.bg-head {
+  background-color: var(--my-head) !important;
+}
+
+.bg-translate {
+  background-color: var(--my-trns-box) !important;
+}
+
+.text-gradient {
+  background-image: linear-gradient(to top, #ec3838, #5d3cb8, #9900ff) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+}
+
+.fs-10 {
+  font-size: 3.5rem !important;
+}
+
+.rounded-5 {
+  border-radius: 60px !important;
+}
+
+.caro-overlay{
+bottom: 20px;
+left: 50%;
+transform: translate(-50%,0);
+width: 80%;
+height: 10rem;
+background-color: #02a2ff7a;
+border-radius: 10px;
+}
+
+.itm-no-focus:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.form-check-input:checked {
+  background-color: #02a2ff !important;
+}
+
+.logo-w {
+  width: 80px;
+}
+
+.fixed-bg {
+  background-image: url(../images/iden\ bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+
+.custom-container {
+  width: 85% !important;
+  margin: auto !important;
+}
+
+.ms-15 {
+  margin-left: auto;
+}
+
+.btn-light:hover{
+background-color: rgb(209, 209, 209);
+}
+
+.social-nav {
+  z-index: 10;
+  right: 8px;
+  top: 50%;
+  transform: translate(0, -50%);
+  opacity: 0.8;
+}
+
+.social-nav li a i {
+  font-size: 80px;
+  text-align: center;
+  line-height: 70px;
+  border-radius: 50px;
+  color: #113a77;
+}
+
+.social-nav li a i:hover {
+  color: #257adb;
+}
+
+.cards-container .card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 119, 255, 0.3);
+  width: 0%;
+  height: 0%;
+  transition: 0.9s;
+}
+
+.cards-container .card:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.cards-container .card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 119, 255, 0.3);
+  width: 0%;
+  height: 0%;
+  transition: 0.9s;
+}
+
+.cards-container .card:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+.thanks-card {
+  border-radius: 50px !important;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  height: auto;
+}
+
+.card-btn{
+width: fit-content;
+margin-left: auto;
+}
+
+.card-body{
+grid-template-columns: 2fr 1fr;
+
+}
+
+.card-img {
+  border-radius: 50px;
+  height: 450px !important;
+}
+.card-img-overlay {
+  background-color: rgba(13, 8, 114, 0.3);
+  border-radius: 50px;
+  padding: 50px;
+  transition: background-color 0.4s ease;
+}
+
+.thanks-img {
+  width: 30%;
+  border: 3px solid gray;
+  border-radius: 50%;
+}
+.thanks-img img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.thanks-card:hover {
+  transform: scale(0.9);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.thanks-card:hover .card-img-overlay {
+  background-color: rgba(13, 0, 255, 0.3);
+}
+
+.thanks-img-info {
+  position: absolute;
+  bottom: 30px;
+}
+.news-img-div {
+  overflow: hidden;
+}
+
+/* , */
+.news-img-t1 {
+  transform: skewX(10deg);
+  transform-origin: top;
+  height: 100%;
+}
+
+.news-img-t2 {
+  transform: skewX(10deg);
+  transform-origin: bottom;
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .news-img-t1,
+  .news-img-t2 {
+    transform: skewX(0);
+  }
+}
+
+
+.News-btns .btn {
+  transition: background-color 0.5s ease;
+}
+
+.News-btns button:hover {
+  background-color: rgb(126, 126, 126) !important;
+}
+
+ .News-btns .cor-btn1:hover {
+  background-color: rgb(133, 119, 72) !important;
+}
+
+.News-btns .cor-btn2:hover {
+  background-color: rgb(72, 76, 133) !important;
+}
+
+.News-btns .cor-btn3:hover {
+  background-color: rgb(133, 72, 133) !important;
+}
+
+.News-btns .cor-btn4:hover {
+  background-color: rgb(65, 63, 175) !important;
+}
+
+.link-muted{
+color: rgb(192, 192, 192);
+}
+
+.link-muted:hover{
+color: rgb(255, 253, 253) !important;
+}
+
+.border-top-bottom{
+border: 2px solid #666666;
+border-right: none;
+border-left: none;
+}
+
+footer{
+padding-bottom: 100px;
+}
+
