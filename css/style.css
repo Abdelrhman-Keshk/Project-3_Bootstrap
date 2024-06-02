@@ -4,8 +4,6 @@
   box-sizing: border-box;
 }
 
-
-
 :root {
   --my-head: #30979e;
   --my-trns-box: #24b1b1;
@@ -20,7 +18,12 @@
 }
 
 .text-gradient {
-  background-image: linear-gradient(to top, #ec3838, #5d3cb8, #9900ff) !important;
+  background-image: linear-gradient(
+    to top,
+    #ec3838,
+    #5d3cb8,
+    #9900ff
+  ) !important;
   background-clip: text !important;
   -webkit-background-clip: text !important;
   color: transparent !important;
@@ -34,14 +37,14 @@
   border-radius: 60px !important;
 }
 
-.caro-overlay{
-bottom: 20px;
-left: 50%;
-transform: translate(-50%,0);
-width: 80%;
-height: 10rem;
-background-color: #02a2ff7a;
-border-radius: 10px;
+.caro-overlay {
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 80%;
+  height: 10rem;
+  background-color: #02a2ff7a;
+  border-radius: 10px;
 }
 
 .itm-no-focus:focus {
@@ -74,8 +77,8 @@ border-radius: 10px;
   margin-left: auto;
 }
 
-.btn-light:hover{
-background-color: rgb(209, 209, 209);
+.btn-light:hover {
+  background-color: rgb(209, 209, 209);
 }
 
 .social-nav {
@@ -136,14 +139,13 @@ background-color: rgb(209, 209, 209);
   height: auto;
 }
 
-.card-btn{
-width: fit-content;
-margin-left: auto;
+.card-btn {
+  width: fit-content;
+  margin-left: auto;
 }
 
-.card-body{
-grid-template-columns: 2fr 1fr;
-
+.card-body {
+  grid-template-columns: 2fr 1fr;
 }
 
 .card-img {
@@ -168,12 +170,16 @@ grid-template-columns: 2fr 1fr;
 }
 
 .thanks-card:hover {
-  transform: scale(0.9);
+  transform: scale(0.9,0.8);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .thanks-card:hover .card-img-overlay {
   background-color: rgba(13, 0, 255, 0.3);
+}
+
+.thanks-card:hover .thanks-img1{
+  transform: scale(1);
 }
 
 .thanks-img-info {
@@ -203,7 +209,9 @@ grid-template-columns: 2fr 1fr;
     transform: skewX(0);
   }
 }
-
+.blue-shadow {
+  box-shadow: 0px 0px 60px rgba(60, 57, 243, 0.349);
+}
 
 .News-btns .btn {
   transition: background-color 0.5s ease;
@@ -213,7 +221,7 @@ grid-template-columns: 2fr 1fr;
   background-color: rgb(126, 126, 126) !important;
 }
 
- .News-btns .cor-btn1:hover {
+.News-btns .cor-btn1:hover {
   background-color: rgb(133, 119, 72) !important;
 }
 
@@ -229,21 +237,28 @@ grid-template-columns: 2fr 1fr;
   background-color: rgb(65, 63, 175) !important;
 }
 
-.link-muted{
-color: rgb(192, 192, 192);
+.link-muted {
+  color: rgb(192, 192, 192);
 }
 
-.link-muted:hover{
-color: rgb(255, 253, 253) !important;
+.link-muted:hover {
+  color: rgb(255, 253, 253) !important;
 }
 
-.border-top-bottom{
-border: 2px solid #666666;
-border-right: none;
-border-left: none;
+.border-top-bottom {
+  border: 2px solid #666666;
+  border-right: none;
+  border-left: none;
 }
 
-footer{
-padding-bottom: 100px;
+footer {
+  padding-bottom: 100px;
 }
 
+.light-shadow {
+  box-shadow: 0px 0px 50px rgba(236, 236, 236, 0.24);
+}
+
+.str-dark-shadow {
+  box-shadow: 0px 0px 60px rgba(5, 5, 5, 0.349);
+}
