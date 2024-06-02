@@ -82,15 +82,14 @@
 }
 
 .social-nav {
-  z-index: 10;
+  z-index: 15;
   right: 8px;
   top: 50%;
   transform: translate(0, -50%);
-  opacity: 0.8;
 }
 
 .social-nav li a i {
-  font-size: 80px;
+  font-size: 70px;
   text-align: center;
   line-height: 70px;
   border-radius: 50px;
@@ -134,35 +133,86 @@
 }
 
 .thanks-card {
-  border-radius: 50px !important;
+  border-radius: 30px !important;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  height: auto;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.thanks-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  background-size: 100% 500px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: inherit;
+  overflow: hidden;
+  background-attachment: local;
+}
+
+.thanks-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(79, 110, 151, 0.671);
+}
+
+.thanks-container .col-12:nth-child(1) .thanks-card::before {
+  background-image: url(../images/SEF\ Academy\ logo.jpg);
+}
+
+.thanks-container .col-12:nth-child(2) .thanks-card::before {
+  background-image: url(../images/zizo.jpg);
+  background-size: 130%;
+}
+
+.thanks-container .col-12:nth-child(3) .thanks-card::before {
+  background-image: url(../images/technical.jpg);
 }
 
 .card-btn {
-  width: fit-content;
-  margin-left: auto;
+  position: absolute;
+  right: 0.5px;
+  top: 15px;
+  z-index: 12;
 }
 
 .card-body {
-  grid-template-columns: 2fr 1fr;
+  position: relative;
 }
 
 .card-img {
-  border-radius: 50px;
+  border-radius: inherit;
   height: 450px !important;
+
 }
 .card-img-overlay {
-  background-color: rgba(13, 8, 114, 0.3);
-  border-radius: 50px;
+  position: absolute;
+  border-radius: inherit;
   padding: 50px;
-  transition: background-color 0.4s ease;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 2;
 }
 
 .thanks-img {
   width: 30%;
   border: 3px solid gray;
   border-radius: 50%;
+  overflow: hidden;
 }
 .thanks-img img {
   width: 100%;
@@ -170,17 +220,22 @@
 }
 
 .thanks-card:hover {
-  transform: scale(0.9,0.8);
+  transform: scale(0.87);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .thanks-card:hover .card-img-overlay {
-  background-color: rgba(13, 0, 255, 0.3);
+  transform: scaleY(0.95);
+  transform-origin: bottom;
 }
 
-.thanks-card:hover .thanks-img1{
-  transform: scale(1);
+.thanks-card:hover::after {
+  background-color: rgba(54, 96, 141, 0.781);
 }
+
+/* .thanks-card:hover::before {
+  background-size: 110%;
+} */
 
 .thanks-img-info {
   position: absolute;
@@ -188,25 +243,43 @@
 }
 .news-img-div {
   overflow: hidden;
+  position: relative;
 }
 
-/* , */
-.news-img-t1 {
-  transform: skewX(10deg);
+.news-img-div-skew1 {
+  transform: skewX(5deg);
   transform-origin: top;
-  height: 100%;
 }
 
-.news-img-t2 {
-  transform: skewX(10deg);
+.news-img-div-skew2 {
+  transform: skewX(5deg);
   transform-origin: bottom;
+}
+
+.news-img {
   height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+  position: relative;
 }
 
 @media (max-width: 767px) {
-  .news-img-t1,
-  .news-img-t2 {
+  .news-img-div-skew1,
+  .news-img-div-skew2 {
     transform: skewX(0);
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .cards-container .col-12 {
+    padding: 50px 110px !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1500px) {
+  .cards-container .col-12 {
+    padding: 50px 5px !important;
   }
 }
 .blue-shadow {
@@ -215,6 +288,27 @@
 
 .News-btns .btn {
   transition: background-color 0.5s ease;
+}
+
+.cor-container .card {
+  transition: 0.4s;
+  overflow: hidden;
+  position: relative;
+}
+
+.cor-container .card:hover .news-img {
+  transform: scale(1.1);
+}
+
+.cor-line {
+  width: 50px;
+  height: 5px;
+  background-color: #113a77;
+  transition: 0.4s ease;
+}
+
+.cor-container .card:hover .cor-line {
+  width: 110px;
 }
 
 .News-btns button:hover {
@@ -261,4 +355,11 @@ footer {
 
 .str-dark-shadow {
   box-shadow: 0px 0px 60px rgba(5, 5, 5, 0.349);
+}
+
+.img-op-hover {
+  transition: 0.4s ease;
+}
+.img-op-hover:hover {
+  opacity: 0.6;
 }
