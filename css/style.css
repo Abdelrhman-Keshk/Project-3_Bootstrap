@@ -61,11 +61,15 @@
 }
 
 .fixed-bg {
-  background-image: url(../images/iden\ bg.jpg);
+  background-image: url(../images/fixed-bg1.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   height: 300px;
+}
+
+.fixed-bg2{
+  background-image: url(../images/fixed-bg2.jpg);
 }
 
 .custom-container {
